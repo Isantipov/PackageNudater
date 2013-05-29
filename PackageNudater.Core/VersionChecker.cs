@@ -7,6 +7,14 @@ namespace PackageNudater.Core
     {
         public IEnumerable<string> GetOutdatedPackages(string packageConfigFile)
         {
+            IEnumerable<PackageInfo> installedPackages = ReadInstalledPackages(packageConfigFile);
+            throw new NotImplementedException();
+        }
+
+        private IEnumerable<PackageInfo> ReadInstalledPackages(string packageConfigFile)
+        {
+            var configReader = new ConfigReader(packageConfigFile);
+
             throw new NotImplementedException();
         }
     }
