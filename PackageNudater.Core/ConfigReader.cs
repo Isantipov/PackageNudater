@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Xml;
 
 namespace PackageNudater.Core
 {
@@ -14,7 +15,29 @@ namespace PackageNudater.Core
 
         public IEnumerable<PackageInfo> Read()
         {
-            throw new NotImplementedException();
+            var xmlDocumnet = new XmlDocument();
+            xmlDocumnet.Load(fileName);
+
+            var packages = new List<PackageInfo>();
+            var packageNodes = xmlDocumnet.FirstChild.ChildNodes;
+            foreach (XmlNode packageNode in packageNodes)
+            {
+                packages.Add(ReadPackageNode(packageNode));
+            }
+
+            return packages;
+        }
+
+        private PackageInfo ReadPackageNode(XmlNode packageNode)
+        {
+            var packageInfo = new PackageInfo
+                {
+                    Id = packageNode.Attributes["id"].Value,
+                    Version = packageNode.Attributes["version"].Value,
+                };
+            
+
+            return packageInfo;
         }
     }
 }
