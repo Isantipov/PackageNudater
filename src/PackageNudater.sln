@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PackageNudater", "PackageNu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PackageNudater.Core", "..\PackageNudater.Core\PackageNudater.Core.csproj", "{FE7CCDCC-B5E9-44D2-8557-43D577F9729A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestCoreApp", "TestCoreApp\TestCoreApp.csproj", "{7941C11A-D36A-4629-9F33-F453295828A1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{FE7CCDCC-B5E9-44D2-8557-43D577F9729A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE7CCDCC-B5E9-44D2-8557-43D577F9729A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FE7CCDCC-B5E9-44D2-8557-43D577F9729A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7941C11A-D36A-4629-9F33-F453295828A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7941C11A-D36A-4629-9F33-F453295828A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7941C11A-D36A-4629-9F33-F453295828A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7941C11A-D36A-4629-9F33-F453295828A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

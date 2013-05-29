@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace PackageNudater.Core
 {
@@ -8,14 +9,14 @@ namespace PackageNudater.Core
         public IEnumerable<string> GetOutdatedPackages(string packageConfigFile)
         {
             IEnumerable<PackageInfo> installedPackages = ReadInstalledPackages(packageConfigFile);
-            throw new NotImplementedException();
+            return installedPackages.Select(i => i.Id + "   " + i.Version);
         }
 
         private IEnumerable<PackageInfo> ReadInstalledPackages(string packageConfigFile)
         {
             var configReader = new ConfigReader(packageConfigFile);
 
-            throw new NotImplementedException();
+            return configReader.Read();
         }
     }
 }

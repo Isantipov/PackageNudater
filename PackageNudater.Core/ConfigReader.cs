@@ -19,7 +19,7 @@ namespace PackageNudater.Core
             xmlDocumnet.Load(fileName);
 
             var packages = new List<PackageInfo>();
-            var packageNodes = xmlDocumnet.FirstChild.ChildNodes;
+            var packageNodes = xmlDocumnet.DocumentElement.ChildNodes;
             foreach (XmlNode packageNode in packageNodes)
             {
                 packages.Add(ReadPackageNode(packageNode));
